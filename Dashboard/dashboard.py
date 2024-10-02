@@ -12,8 +12,8 @@ sns.set(style='darkgrid')
 @st.cache_data
 def load_data():
     try:
-        all_df = pd.read_csv('Dashboard\df.csv') 
-        geolocation_df = pd.read_csv('Dashboard\geolocation.csv') 
+        all_df = pd.read_csv('Dashboard/df.csv') 
+        geolocation_df = pd.read_csv('Dashboard/geolocation.csv') 
         all_df['order_approved_at'] = pd.to_datetime(all_df['order_approved_at'])
         return all_df, geolocation_df
     except Exception as e:
